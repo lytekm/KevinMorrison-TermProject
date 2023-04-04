@@ -1,0 +1,228 @@
+body{
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 30px;
+}
+
+header h1{
+    color: #000000;
+}
+
+header h1::before{
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    border-bottom: 2px solid rgb(13, 255, 0);
+    width: 80px;
+    margin: 0 30px;
+}
+
+footer{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin: 0 30px;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+}
+
+nav a{
+    color: #000000;
+    text-decoration: none;
+    padding: 0 10px;
+    background-image: linear-gradient(rgb(13, 255, 0) 0 0);
+    background-size: 200% .08em;
+    background-position: 200% 100%;
+    background-repeat: no-repeat;
+    transition: background-position 1s;
+}
+
+nav a:hover{
+    color: rgb(13, 255, 0);
+    background-position: 0 100%;
+}
+
+.about-section{
+    position: relative;
+    margin: 0 30px;
+}
+
+.about-section p{
+    background-color: #000;
+    color: #fff;
+    border: 5px solid rgb(13, 255, 0);
+    padding: 20px;
+    margin: 30px;
+    width: 50%;
+}
+
+.about-section img{
+    position: absolute;
+    top: 0;
+    right: 200px;
+    width: 40%;
+    z-index: -1;
+    border: 5px solid rgb(13, 255, 0);
+}
+
+.team-section{
+    margin: 0 30px;
+    color: black;
+}
+
+.images{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    margin-top: 70px;
+}  
+
+.images img{
+    margin: 30px;
+    border: 5px solid rgb(13, 255, 0);
+}
+
+.image-link{
+    position: relative;
+    width: min-content;
+    height: min-content;
+}
+
+.image-link::before{
+    content: "Click to view";
+    color: rgb(0, 0, 0);
+    background-color: green;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    opacity: 0%;
+    transition: 200ms ease;
+}
+
+.image-link:hover::before{
+    top: 50%;
+    opacity: 100%;
+}
+
+.form{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: black;
+    padding: 20px;
+}
+
+.form label{
+    color: white;
+}
+
+.form > input, textarea{
+    margin: 10px 0;
+    padding: 10px;
+    border: 5px solid rgb(13, 255, 0);
+}
+
+.form > input[type="submit"]{
+    padding: 10px;
+    border: 5px solid rgb(13, 255, 0);
+    background-color: rgb(13, 255, 0);
+    color: black;
+    font-weight: bold;
+}
+
+.form > input[type="submit"]:hover{
+    background-color: rgb(7, 135, 0);
+    color: white;
+}
+
+.image-fullsize{
+    width: 50%;
+    margin: auto;
+}
+
+.image-fullsize img{
+    margin: 30px;
+    width: 100%;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    margin:auto;
+    width: 30%;
+}
+
+.info p{
+    margin: 10px;
+}
+
+.info button{
+    padding: 10px;
+    border: 5px solid rgb(7, 135, 0);
+    background-color: rgb(13, 255, 0);
+    color: black;
+    font-weight: bold;
+}
+
+.info button:hover{
+    background-color: rgb(7, 135, 0);
+    color: white;
+}
+
+@media screen and (max-width: 768px){
+    .about-section img{
+        position: relative;
+        width: 100%;
+        right: 0;
+    }
+
+    .images{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .images{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    nav{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        align-items: center;
+        justify-content: space-around;
+        z-index: 1;
+    }
+
+    nav a{
+        color: #fff;
+    }
+}
+  
