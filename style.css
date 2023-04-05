@@ -228,6 +228,11 @@ nav a:hover{
 }
 
 @media screen and (max-width: 768px){
+    .about-section p{
+        width: 100%;
+        margin: 5px;
+    }
+
     .about-section img{
         position: relative;
         width: 100%;
